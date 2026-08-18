@@ -1,47 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verification Test</title>
-
-<style>
-body {
-margin: 0;
-min-height: 100vh;
-display: flex;
-align-items: center;
-justify-content: center;
-font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", Arial, sans-serif;
-background: #f7f7f8;
-}
-
-.container {
-text-align: center;
-padding: 32px;
-}
-
-h1 {
-font-size: 28px;
-margin-bottom: 16px;
-}
-
-p {
-color: #666;
-line-height: 1.5;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>Verification Test</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Display",
+        "SF Pro Text",
+        Arial,
+        sans-serif;
+      background: #f7f7f8;
+      color: #171717;
+    }
+    .container {
+      width: 100%;
+      max-width: 420px;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 40px 28px;
+      text-align: center;
+      box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.08);
+    }
+    .icon {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f0f0f2;
+      font-size: 32px;
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-size: 28px;
+      line-height: 1.2;
+    }
+    p {
+      margin: 0 auto 32px;
+      max-width: 320px;
+      color: #666;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    button {
+      width: 100%;
+      border: 0;
+      border-radius: 14px;
+      padding: 16px 20px;
+      font-size: 17px;
+      font-weight: 600;
+      background: #111111;
+      color: #ffffff;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+    button:active {
+      transform: scale(0.98);
+    }
+  </style>
 </head>
-
 <body>
-<div class="container">
-<h1>New Tab Verification</h1>
-
-<p>
-If you can see this page after tapping
-"Open Verification in New Tab", the new-tab
-navigation reached this page.
-</p>
-</div>
+  <div class="container">
+    <div class="icon">
+      ✓
+    </div>
+    <h1>
+      IDVerse Verification
+    </h1>
+    <p>
+      This page simulates the IDVerse verification flow.
+      Tap the button below to complete verification.
+    </p>
+    <button
+      type="button"
+      onclick="verificationCompleted()"
+    >
+      Complete Verification
+    </button>
+  </div>
+  <script>
+    function verificationCompleted() {
+      /*
+       * Simulate successful verification.
+       *
+       * Replace "nalabagam" with the URL scheme
+       * registered by your native iOS application.
+       */
+      window.location.href =
+        "nalabagam://verification/complete?status=verified";
+    }
+  </script>
 </body>
 </html>
