@@ -139,18 +139,23 @@
   <!-- PAGE 2: Dummy verification content -->
   <section id="page2" class="page">
     <div class="icon">◎</div>
-
     <h1>Verification Details</h1>
 
     <p>
       Please review this information and continue.
       This is dummy verification content for testing the app flow.
     </p>
-
+    
     <button type="button" onclick="showPage(3)">
       Next
     </button>
-  </section>
+
+<a href="https://srivicky24.github.io/verification-poc/verification-test.html"
+ target="_blank"
+  style="display: block; margin-top: 18px; color: #111; text-decoration: underline; font-size: 16px;">
+    Open Verification in New Tab
+  </a>
+</section>
 
 
   <!-- PAGE 3: Loading -> Verified -->
@@ -205,9 +210,8 @@
     }
 
     function continueToApp() {
-      // Replace this with your actual application's custom URL scheme.
       window.location.href =
-        "auspost://verification/complete?status=verified";
+        "auspost://idVerification?status=verified";
     }
   </script>
 
