@@ -219,9 +219,8 @@
         "auspost://idVerification?status=verified";
     }
     function continueToAppWithFailureStatus() {
-      const reason = encodeURIComponent("ID Verse Verification Failed");
       window.location.href =
-        `auspost://idVerification?status=failed&reason=$(reason)`;
+        "auspost://idVerification?status=failed&reason=ID Verse Verification Failed";
     }
   </script>
 
