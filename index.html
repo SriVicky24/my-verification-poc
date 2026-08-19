@@ -183,6 +183,9 @@
       <button type="button" onclick="continueToApp()">
         Continue
       </button>
+      <button type="button" onclick="continueToAppWithFailureStatus()">
+        Cancel
+      </button>
     </div>
 
   </section>
@@ -210,9 +213,12 @@
     }
 
     function continueToApp() {
-      // Replace this with your actual application's custom URL scheme.
       window.location.href =
         "auspost://idVerification?status=verified";
+    }
+    function continueToAppWithFailureStatus() {
+      window.location.href =
+        "auspost://idVerification?status=notVerified";
     }
   </script>
 
